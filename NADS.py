@@ -13,6 +13,8 @@ def f(x):
 def df(f):
 	return sympy.diff(f)
 
+#racuna niz vrednosti za funkciju sa gustinom alpha
+#da bi je nacrtali sa plt.plot(niz_x,niz_y)
 def calculate_function(function, xaxis_min, xaxis_max, alpha):
 	i = 0
 
