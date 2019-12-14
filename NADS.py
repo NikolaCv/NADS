@@ -63,7 +63,7 @@ def newton(function, precision, alpha, x_starting, xaxis_min, xaxis_max, yaxis_m
 	curr = 1
 	while curr > precision:
 
-		#dok je tangent sa simbolom 'x', pa mora da se lambdify pre poziva calculate_function
+		#tangent je sa simbolom 'x', pa mora da se lambdify pre poziva calculate_function
 		tangent_function = sympy.lambdify(xs, tangent(xs,x0[i],function(xs)))
 		xt1, yt1 = calculate_function(tangent_function, xaxis_min, xaxis_max, 0.1)
 
