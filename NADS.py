@@ -1,8 +1,6 @@
-import math
 import matplotlib.pyplot as plt
 from matplotlib import style
 import sympy
-from sympy.plotting import plot
 
 style.use("classic")
 
