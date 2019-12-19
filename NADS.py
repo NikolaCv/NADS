@@ -44,7 +44,7 @@ def secica(x,x0,x1,f):
 
 #precision: koliko precizno da nadje resenje; alpha: koliko gusto da crta grafik
 #x,yaxis: crta grafik od min do max, plot_graphs: da crta ili samo u terminalu da ispise
-def newton(function, precision, alpha, x_starting, xaxis_min, xaxis_max, yaxis_min, yaxis_max, plot_graphs):
+def newton(function, precision, alpha, m1, M2, x_starting, xaxis_min, xaxis_max, yaxis_min, yaxis_max, plot_graphs):
 
 	xs = sympy.Symbol('x')
 
@@ -61,7 +61,7 @@ def newton(function, precision, alpha, x_starting, xaxis_min, xaxis_max, yaxis_m
 	i = 0
 
 	curr = 1
-	while curr > precision:
+	while curr > (precision*abs(m1)/abs(M2))**(1/2):
 
 		#tangent je sa simbolom 'x', pa mora da se lambdify pre poziva calculate_function
 		tangent_function = sympy.lambdify(xs, tangent(xs,x0[i],function(xs)))
@@ -132,6 +132,6 @@ def newton(function, precision, alpha, x_starting, xaxis_min, xaxis_max, yaxis_m
 
 def main():
 
-	newton(f, 10**(-4), 10**(-3), 0.0000001, 0, 1, -0.5, 1.1, True)
+	newton(f, 10**(-4), 10**(-3), -7.39198, 186.0319, 0.01, 0, 1, -0.5, 1.1, True)
 
 main()
