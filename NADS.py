@@ -5,7 +5,7 @@ import sympy
 style.use("classic")
 
 def f1(x):
-	return sympy.log(x) - x + 2
+	return sympy.exp(x) - 1
 
 def f(x):
 	return 2 * x * (1 - x**2 + x) * sympy.log(x) + 1 - x**2
