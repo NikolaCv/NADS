@@ -44,6 +44,7 @@ def secica(x,x0,x1,f):
 
 #precision: koliko precizno da nadje resenje; alpha: koliko gusto da crta grafik
 #x,yaxis: crta grafik od min do max, plot_graphs: da crta ili samo u terminalu da ispise
+# m1 = min(f'(x));  M2 = max(f"(x)) na intervalu [a,b]
 def newton(function, precision, alpha, m1, M2, x_starting, xaxis_min, xaxis_max, yaxis_min, yaxis_max, plot_graphs):
 
 	xs = sympy.Symbol('x')
